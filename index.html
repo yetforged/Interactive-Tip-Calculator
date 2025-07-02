@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <h1>Smart Tip Calculator</h1>
+
+        <div class="calculator">
+            <section class="input-section">
+                <h2>Inputs</h2>
+                <div class="input-group">
+                    <label for="billAmount">💰 Bill Amount (₹)</label>
+                    <input type="number" id="billAmount" placeholder="0.00" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="tipPercentage">🎯 Tip Percentage</label>
+                    <div class="tip-control">
+                        <input type="range" id="tipPercentage" min="0" max="100" value="15">
+                        <span id="tipPercentageValue">15%</span>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="numberOfPeople">👥 Number of People</label>
+                    <input type="number" id="numberOfPeople" placeholder="1" min="1" step="1">
+                </div>
+            </section>
+
+            <section class="output-section">
+                <h2>Live Output</h2>
+                <div class="output-group">
+                    <span>✅ Tip Amount</span>
+                    <span id="tipAmount">₹0.00</span>
+                </div>
+                <div class="output-group">
+                    <span>✅ Total Bill</span>
+                    <span id="totalBill">₹0.00</span>
+                </div>
+                <div class="output-group">
+                    <span>✅ Per Person Amount</span>
+                    <span id="perPersonAmount">₹0.00</span>
+                </div>
+                <div class="feedback-group">
+                    <span class="emoji" id="tipEmoji">🙂</span>
+                    <span id="tipFeedback">Fair</span>
+                </div>
+            </section>
+
+            <section class="receipt-section">
+                <h2>Receipt Summary</h2>
+                <pre id="receipt" class="receipt">
+┌────────────────────────┐
+│     Smart Tip Calc     │
+├────────────────────────┤
+│ Bill Amount     ₹0.00  │
+│ Tip (15%)       ₹0.00  │
+│ Total           ₹0.00  │
+│ Split (x1)      ₹0.00  │
+└────────────────────────┘
+                </pre>
+            </section>
+
+            <div class="controls">
+                <button id="resetButton" class="reset-btn">🔁 Reset</button>
+                <button id="printButton" class="print-btn">🖨️ Print Receipt</button>
+                <div class="theme-switcher">
+                    <label for="themeToggle">🌙 Dark Mode</label>
+                    <input type="checkbox" id="themeToggle" class="theme-toggle">
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="app-footer">
+        <p>Built by Chirayu with help from LLMs</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
